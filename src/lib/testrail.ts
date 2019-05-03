@@ -10,6 +10,10 @@ export class TestRail {
     this.base = `https://${options.domain}/index.php?/api/v2`;
   }
 
+  public setRunId(runId: number)  {
+    this.runId = runId;
+  }
+
   public createRun(name: string, description: string) {
     axios({
       method: 'post',

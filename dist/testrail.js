@@ -7,6 +7,9 @@ var TestRail = /** @class */ (function () {
         this.options = options;
         this.base = "https://" + options.domain + "/index.php?/api/v2";
     }
+    TestRail.prototype.setRunId = function (runId) {
+        this.runId = runId;
+    };
     TestRail.prototype.createRun = function (name, description) {
         var _this = this;
         axios({
